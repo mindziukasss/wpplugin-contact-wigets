@@ -17,9 +17,9 @@ jQuery(document).ready(function(){
 
         jQuery(formMessages).text(response);
 
-        jQuery('#name').value('');
-        jQuery('#email').value('');
-        jQuery('#message').value('');
+        jQuery('#name').val('');
+        jQuery('#email').val('');
+        jQuery('#message').val('');
 
 
     }).fail(function(data){
@@ -28,7 +28,7 @@ jQuery(document).ready(function(){
 
         if(data.responseText !== ''){
           jQuery(formMessages).text(data.responseText);
-        }else {
+        } else {
           jQuery(formMessages).text('An error occured');
         }
     });
