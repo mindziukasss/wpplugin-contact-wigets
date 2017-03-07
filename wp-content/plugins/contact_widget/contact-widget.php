@@ -12,7 +12,7 @@ function add_scripts(){
   wp_enqueue_script('contact-scripts', plugins_url().'/contact-widget/js/script.js', array('jquery'),'1.0.0', false);
 }
 
-add_action('wp_enqueue_scripts', 'add_scripts');
+add_action('wp_enqueue_scripts','add_scripts');
 
 
 include('class.contact-widget.php');
@@ -22,4 +22,4 @@ function register_contact_widget(){
   register_widget('Contact_Widget');
 }
 
-add_action('widgets_init', 'register_contact_widget');
+add_action('widgets_init','register_contact_widget');
